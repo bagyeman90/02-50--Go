@@ -17,15 +17,24 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+
+    permissions:
+      checks: write
+
+    steps:
     - uses: actions/checkout@v3
 
     - name: Set up Go
       uses: actions/setup-go@v4
       with:
-        go-version: '1.20'
+        go-version: go-version-file: 'go.mod'
+
+    - name: Revive Action
+      run: morphy2k/revive-action
 
     - name: Build
       run: go build -v ./...
 
     - name: Test
       run: go test -v ./...
+      
