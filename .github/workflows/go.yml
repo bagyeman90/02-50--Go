@@ -30,7 +30,7 @@ jobs:
         cache: true
 
     - name: Revive Action
-      run: morphy2k/revive-action
+      run: morphy2k/revive-action@v2.4.1
 
     - name: Run StaticCheck
       run: dominikh/staticcheck-action@v1.3.0
