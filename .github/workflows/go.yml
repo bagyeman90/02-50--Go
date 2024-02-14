@@ -4,7 +4,7 @@
 name: Go
 
 env:
-  GIN_MODE
+  GIN_MODE: release
 
 on:
   push:
